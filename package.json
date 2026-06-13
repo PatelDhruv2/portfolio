@@ -1,0 +1,31 @@
+{
+  "name": "dhruv-patel-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A premium Next.js portfolio for Dhruv Patel.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint app data next.config.ts eslint.config.mjs"
+  },
+  "keywords": [
+    "nextjs",
+    "portfolio",
+    "vercel"
+  ],
+  "author": "Dhruv Patel",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^16.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/react": "^19.2.14",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.2",
+    "typescript": "^6.0.2"
+  }
+}
