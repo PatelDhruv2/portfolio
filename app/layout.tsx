@@ -15,9 +15,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dhruv Patel | Full-Stack Developer",
+  title: "Dhruv Patel | Interactive Ground Portfolio",
   description:
-    "Portfolio of Dhruv Patel, a full-stack developer focused on scalable systems, realtime products, and polished user experiences.",
+    "An interactive portfolio inspired by a court-like ground layout, with a seated player, lane-based navigation, and sections that move with the play.",
   metadataBase: new URL("https://example.vercel.app"),
 };
 
@@ -32,4 +32,3 @@ export default function RootLayout({
     </html>
   );
 }
-
