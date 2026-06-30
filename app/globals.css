@@ -1853,7 +1853,7 @@ a {
 
 .arena-hero__copy h1 {
   max-width: 12ch;
-  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-size: clamp(2.9rem, 5.4vw, 5.1rem);
   line-height: 0.92;
 }
 
@@ -1899,7 +1899,7 @@ a {
 
 .arena-court {
   position: relative;
-  min-height: 620px;
+  min-height: 580px;
   border-radius: 34px;
   padding: 18px;
   border: 1px solid rgba(122, 90, 57, 0.14);
@@ -2156,6 +2156,38 @@ a {
   box-shadow: 0 24px 56px rgba(96, 62, 29, 0.12);
 }
 
+@media (min-width: 1440px) {
+  .arena-hero {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: 40px;
+  }
+
+  .arena-hero__copy {
+    max-width: 720px;
+  }
+
+  .arena-hero__copy h1 {
+    max-width: 10.5ch;
+    font-size: clamp(2.9rem, 4.8vw, 4.9rem);
+  }
+
+  .arena-court {
+    min-height: 520px;
+  }
+
+  .court-seat {
+    width: min(172px, 24vw);
+  }
+
+  .court-seat--about {
+    width: min(198px, 28vw);
+  }
+
+  .arena-stage {
+    padding-top: 10px;
+  }
+}
+
 .arena-section-badge {
   max-width: 760px;
 }
@@ -2264,11 +2296,20 @@ a {
 
 .project-pole__art {
   position: relative;
-  min-height: 180px;
+  min-height: 220px;
   padding: 18px;
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--project-accent) 62%, white), transparent),
     var(--project-accent);
+}
+
+.project-pole__art::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
 
 .project-pole__number {
@@ -2289,6 +2330,101 @@ a {
   font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 700;
   letter-spacing: -0.08em;
+}
+
+.project-pole__photo {
+  position: absolute;
+  inset: 54px 18px 18px 18px;
+  display: grid;
+  align-content: end;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.project-pole__photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 80%, rgba(255, 255, 255, 0.16), transparent 12%),
+    radial-gradient(circle at 84% 20%, rgba(255, 255, 255, 0.12), transparent 10%);
+  pointer-events: none;
+}
+
+.project-pole__art--market .project-pole__photo {
+  background:
+    linear-gradient(180deg, rgba(120, 74, 25, 0.18), rgba(255, 255, 255, 0.1)),
+    radial-gradient(circle at 20% 20%, rgba(255, 214, 165, 0.22), transparent 22%);
+}
+
+.project-pole__art--chat .project-pole__photo {
+  background:
+    linear-gradient(180deg, rgba(10, 111, 124, 0.2), rgba(255, 255, 255, 0.1)),
+    radial-gradient(circle at 25% 20%, rgba(199, 255, 245, 0.22), transparent 22%);
+}
+
+.project-pole__art--mail .project-pole__photo {
+  background:
+    linear-gradient(180deg, rgba(95, 52, 145, 0.22), rgba(255, 255, 255, 0.1)),
+    radial-gradient(circle at 25% 20%, rgba(229, 211, 255, 0.22), transparent 22%);
+}
+
+.project-pole__photo-badge {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 248, 232, 0.88);
+  color: #6d4525;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-pole__photo-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  width: 78%;
+  min-height: 88px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 248, 232, 0.88);
+  box-shadow: 0 12px 24px rgba(96, 62, 29, 0.12);
+}
+
+.project-pole__photo-line {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d8b38a, #8a5a2b);
+}
+
+.project-pole__photo-line--wide {
+  width: 100%;
+}
+
+.project-pole__photo-line--short {
+  width: 62%;
+}
+
+.project-pole__photo-caption {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 248, 232, 0.96);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-pole__body {

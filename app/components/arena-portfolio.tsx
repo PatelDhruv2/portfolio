@@ -27,6 +27,24 @@ const projectAccents = [
   "linear-gradient(135deg, #7c3aed, #c084fc)",
 ] as const;
 
+const projectScenes = [
+  {
+    title: "Grocery hub",
+    caption: "Catalog, cart, checkout",
+    variant: "market",
+  },
+  {
+    title: "Chat rooms",
+    caption: "Presence, typing, delivery",
+    variant: "chat",
+  },
+  {
+    title: "Mail engine",
+    caption: "Rules, triggers, sends",
+    variant: "mail",
+  },
+] as const;
+
 const skillIcons = ["R", "B", "D", "O", "C"] as const;
 
 function ArenaButton({
@@ -163,15 +181,21 @@ function SectionContent({
               rel="noreferrer"
               aria-label={`${project.name} repository`}
             >
-              <div className="project-pole__art" style={{ "--project-accent": projectAccents[index] } as CSSProperties}>
+              <div
+                className={`project-pole__art project-pole__art--${projectScenes[index].variant}`}
+                style={{ "--project-accent": projectAccents[index] } as CSSProperties}
+              >
                 <span className="project-pole__number">0{index + 1}</span>
-                <span className="project-pole__initials">
-                  {project.name
-                    .split(" ")
-                    .slice(0, 2)
-                    .map((word) => word[0])
-                    .join("")}
-                </span>
+
+                <div className="project-pole__photo" aria-hidden="true">
+                  <span className="project-pole__photo-badge">{projectScenes[index].title}</span>
+                  <div className="project-pole__photo-panel">
+                    <span className="project-pole__photo-line project-pole__photo-line--wide" />
+                    <span className="project-pole__photo-line" />
+                    <span className="project-pole__photo-line project-pole__photo-line--short" />
+                  </div>
+                  <span className="project-pole__photo-caption">{projectScenes[index].caption}</span>
+                </div>
               </div>
 
               <div className="project-pole__body">
