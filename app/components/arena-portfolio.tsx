@@ -438,9 +438,9 @@ export function ArenaPortfolio() {
       <section id="ground" className="arena-hero">
         <div className="arena-hero__copy">
           <span className="arena-eyebrow">Interactive ground navigation</span>
-          <h1>A single court where every lane opens a different part of my work.</h1>
+          <h1>A court-shaped portfolio where every lane leads somewhere useful.</h1>
           <p className="arena-hero__lead">
-            Tap the center player or any lane seat to reveal the matching section beside the court.
+            Tap the player or any lane seat to reveal the matching section beside the court.
           </p>
 
           <div className="arena-actions">
