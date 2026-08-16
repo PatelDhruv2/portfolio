@@ -13,7 +13,7 @@ export const portfolio = {
     leetcode: "https://leetcode.com/u/dhruv711622/",
   },
   intro:
-    "I build ambitious web products with a backend-first mindset, blending polished interfaces with distributed systems, realtime experiences, and production-oriented engineering.",
+    "I build backend-leaning full-stack systems that hold up under load, with a focus on realtime products, distributed workflows, and clean operational surfaces.",
   status:
     "B.Tech Computer Science student at IIIT Vadodara, actively building scalable products and looking for strong internship and collaboration opportunities.",
   education: {
@@ -28,11 +28,12 @@ export const portfolio = {
       role: "Full Stack Developer Intern",
       period: "Aug 2025 - Sep 2025",
       summary:
-        "Built workflow-heavy hiring features across employer and candidate journeys, with a strong focus on modular services and realtime interactions.",
+        "Built workflow-heavy hiring features across employer and candidate journeys, with a focus on verified profiles, listing flows, and realtime interactions.",
       highlights: [
-        "Built a job and internship listing platform using Vue.js, React, Node.js, and Express.",
-        "Developed realtime chat and interview scheduling with Socket.IO and REST API integration.",
-        "Designed modular service architecture to improve maintainability and support horizontal scaling.",
+        "Built job and internship listing pages across Vue.js, React, Node.js, and Express.",
+        "Implemented profile verification workflows for cleaner candidate and employer records.",
+        "Developed WebSocket-based post-shortlist chat with Socket.IO and REST API integration.",
+        "Kept services modular so new hiring flows could be added without reshaping the whole app.",
       ],
     },
   ],
@@ -41,66 +42,64 @@ export const portfolio = {
       name: "Scalable Grocery E-Commerce Platform",
       href: "https://github.com/PatelDhruv2/Grocery-app",
       summary:
-        "A distributed commerce platform designed around reliability, async processing, and operational visibility.",
-      stack: ["Next.js", "PostgreSQL", "Node.js", "Tailwind CSS", "Kafka", "Redis", "Docker"],
+        "Distributed grocery platform with REST APIs, Redis caching, Nginx load balancing, and a Kafka-backed order pipeline.",
+      stack: ["Next.js", "PostgreSQL", "Node.js", "Redis", "Kafka", "Docker", "Nginx"],
       highlights: [
-        "Built ordering, catalog, cart, auth, and order-processing APIs with server-side pagination and filtering.",
-        "Used Kafka queues for async workflows and Redis to reduce database load and improve response time.",
-        "Set up Nginx load balancing, containerized services, and monitoring with Grafana and Prometheus.",
+        "19+ REST endpoints across catalog, cart, auth, ordering, and order-processing flows.",
+        "Redis caching reduced repeated read latency from 50ms to 5ms.",
+        "Nginx load balanced traffic across 4 application instances.",
+        "Kafka powered the event-driven order pipeline.",
       ],
     },
     {
       name: "Real-Time Chat Application",
       href: "https://github.com/PatelDhruv2/Chat-App-Quick",
       summary:
-        "A realtime messaging system centered on smooth user presence, secure auth flows, and scalable socket events.",
-      stack: ["Next.js", "Node.js", "Express", "Socket.IO", "Prisma", "Redis"],
+        "Realtime messaging app with scalable WebSocket broadcasting, OTP and Google OAuth auth, and Redis-backed socket coordination.",
+      stack: ["Next.js", "Node.js", "Socket.IO", "Redis", "Prisma"],
       highlights: [
-        "Supported private and group conversations over bidirectional WebSocket communication.",
-        "Implemented OTP verification and Google OAuth 2.0 for secure authentication.",
-        "Added typing indicators, read receipts, online presence, and efficient concurrent event handling.",
+        "Benchmarked at 2,935+ messages per second over WebSocket traffic.",
+        "Implemented Google OAuth and OTP-based authentication.",
+        "Used Redis as the Socket.IO adapter for cross-instance broadcasting.",
       ],
     },
     {
-      name: "Email Notification System",
+      name: "Email Triage Assistant",
       href: "https://github.com/PatelDhruv2/Email-notifier",
       summary:
-        "A rule-based notification platform for automated email workflows with deployment-conscious architecture.",
-      stack: ["React", "Node.js", "Express", "Google OAuth", "Vercel", "Railway"],
+        "Email workflow assistant with Gmail API integration, priority rules, queue processing, and split frontend/backend deployment.",
+      stack: ["Next.js", "Express", "Prisma", "PostgreSQL", "Redis", "BullMQ"],
       highlights: [
-        "Created configurable notification triggers and delivery scheduling for automated outreach.",
-        "Integrated Google OAuth for email access and sending flows.",
-        "Deployed frontend and backend separately with CI/CD-friendly infrastructure choices.",
+        "Integrated Gmail API access for email workflow automation.",
+        "Added priority rules for triage and routing.",
+        "Used Redis and BullMQ for queued background work.",
+        "Deployed across Vercel and Railway.",
       ],
     },
   ],
   skillGroups: [
     {
-      label: "Frontend",
-      items: ["React", "Next.js", "Vue.js", "Tailwind CSS", "TypeScript", "JavaScript"],
-    },
-    {
-      label: "Backend",
-      items: ["Node.js", "Express.js", "REST APIs", "WebSockets", "Socket.IO"],
-    },
-    {
-      label: "Data",
-      items: ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "Redis", "Kafka"],
-    },
-    {
-      label: "DevOps and Tooling",
-      items: ["Docker", "Jenkins", "Nginx", "Grafana", "Prometheus", "Git", "Postman"],
+      label: "Languages",
+      items: ["C++", "C", "TypeScript", "JavaScript", "SQL"],
     },
     {
       label: "Core CS",
-      items: ["C++", "C", "Data Structures", "Algorithms", "Dynamic Programming", "Graph Theory"],
+      items: ["Data Structures", "Algorithms", "Dynamic Programming", "Graph Theory", "Problem Solving"],
+    },
+    {
+      label: "Frameworks",
+      items: ["React", "Next.js", "Vue.js", "Node.js", "Express.js", "Socket.IO", "Prisma"],
+    },
+    {
+      label: "Infrastructure",
+      items: ["PostgreSQL", "Redis", "Kafka", "Docker", "Nginx", "BullMQ", "Grafana", "Prometheus"],
     },
   ],
   stats: [
-    { value: "600+", label: "LeetCode problems solved" },
-    { value: "1200+", label: "Problems across platforms" },
-    { value: "1291", label: "Peak Codeforces rating" },
-    { value: "1650", label: "Peak CodeChef rating" },
+    { value: "50ms -> 5ms", label: "Cache latency" },
+    { value: "2,935 msg/sec", label: "Peak throughput" },
+    { value: "4", label: "Instances load-balanced" },
+    { value: "1,400+", label: "Problems solved" },
   ],
   profiles: [
     {

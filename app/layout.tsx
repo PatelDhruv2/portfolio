@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 
 import "./globals.css";
 
-const heading = Space_Grotesk({
-  variable: "--font-heading",
+const display = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+});
+
+const body = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -15,9 +20,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dhruv Patel | Interactive Ground Portfolio",
+  title: "Dhruv Patel | Ops Console Portfolio",
   description:
-    "An interactive portfolio inspired by a court-like ground layout, with a seated player, lane-based navigation, and sections that move with the play.",
+    "A dark technical portfolio for Dhruv Patel, focused on backend-leaning full-stack systems, realtime infrastructure, and measurable engineering work.",
   metadataBase: new URL("https://example.vercel.app"),
 };
 
@@ -28,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${mono.variable}`}>{children}</body>
+      <body className={`${display.variable} ${body.variable} ${mono.variable}`}>{children}</body>
     </html>
   );
 }
